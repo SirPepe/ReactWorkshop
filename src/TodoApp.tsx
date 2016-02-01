@@ -28,14 +28,14 @@ var items = [
 
 // END CRAP ==============================================================
 
-export interface Item {
+export interface ItemProp {
   done: boolean;
   title: string;
   details: string;
 }
 
-export interface ItemList {
-  items: Array<Item>;
+export interface ItemPropList {
+  items: Array<ItemProp>;
 }
 
 export default class TodoApp extends React.Component<any, any> {

@@ -1,9 +1,9 @@
 import * as React from "react";
 import TodoItem from "./TodoItem";
-import { ItemList } from "./TodoApp";
+import { ItemPropList } from "./TodoApp";
 
-export default class TodoList extends React.Component<ItemList, any> {
-  constructor(props: ItemList){
+export default class TodoList extends React.Component<ItemPropList, any> {
+  constructor(props: ItemPropList){
     super(props);
   }
   render() {
