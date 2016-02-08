@@ -4,7 +4,9 @@
   "description": "Template für den React-Workshop",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node_modules/.bin/webpack",
+    "watch": "node_modules/.bin/webpack  --watch",
+    "serve": "node server.js"
   },
   "author": "peter@peterkroener.de",
   "license": "MIT",
@@ -25,5 +27,11 @@
     "typescript": "^1.7.5",
     "webpack": "^1.12.12"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.13.4",
+    "livereload": "^0.4.1",
+    "morgan": "^1.6.1",
+    "serve-index": "^1.7.3",
+    "serve-static": "^1.10.2"
+  }
 }

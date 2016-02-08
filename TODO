@@ -1,4 +1,0 @@
-npm install
-npm install tsd -g <- TypeScript Definitions
-tsd install
-https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6#.70cxs1uhb
