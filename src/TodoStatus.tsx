@@ -1,8 +1,8 @@
 import * as React from "react";
-import { ItemPropList } from "./TodoApp";
+import { Item } from "./TodoApp";
 
-export default class TodoStatus extends React.Component<ItemPropList, any> {
-  constructor(props: ItemPropList){
+export default class TodoStatus extends React.Component<{ items: Item[] }, void> {
+  constructor(props){
     super(props);
   }
   render() {
