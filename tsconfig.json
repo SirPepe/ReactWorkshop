@@ -3,7 +3,8 @@
     "target": "es6",
     "sourceMap": true,
     "jsx": "react",
-    "moduleResolution": "node"
+    "moduleResolution": "classic",
+    "experimentalDecorators": true
   },
   "exclude": [
       "node_modules",
