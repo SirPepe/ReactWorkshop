@@ -31,13 +31,17 @@ export default class TodoForm extends React.Component<TodoFormProps, {}> {
     Smart Component einen Fehler-State kontrolliert, könnte man nach dem
     gleichen Muster einsetzen
   */
-  onSubmit(evt: React.FormEvent){ // TODO Reset input value
-    let title = ReactDOM
-      .findDOMNode<HTMLInputElement>(this.refs["title"]).value;
-    let details = ReactDOM
-      .findDOMNode<HTMLTextAreaElement>(this.refs["details"]).value;
+  onSubmit(evt: React.FormEvent){
     evt.preventDefault();
-    this.props.addItem(title, details); // Callback wird aufgerufen
+    // Inputs aus dem DOM fischen
+    const titleNode = ReactDOM.findDOMNode<HTMLInputElement>(this.refs["title"]);
+    const detailsNode = ReactDOM.findDOMNode<HTMLTextAreaElement>(this.refs["details"]);
+    // Callback wird aufgerufen
+    this.props.addItem(titleNode.value, detailsNode.value);
+    // Inputs leeren
+    detailsNode.value = "";
+    titleNode.value = "";
+
   }
   render() {
     return (
