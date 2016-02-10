@@ -10,7 +10,7 @@
   der aus allen Reducern in dieser App zusammengesetzt ist. Alle Reducer liegen
   im Verzeichnis "./reducers/".
 */
-import { createStore } from 'redux'
+import { createStore } from "redux";
 import reducers from "./reducers/index";
 const store = createStore(reducers);
 
@@ -22,7 +22,7 @@ const store = createStore(reducers);
   erzeugt, den soganannten ACTION CREATORS. (zu finden in "./actions/")
   Diese paar Zeilen erzeugen die drei Anfangs-Todo-Punkte
 */
-import { add } from './actions/todo';
+import { add } from "./actions/todo";
 store.dispatch(add("Learn React", "Learn about React and JSX"));
 store.dispatch(add("Learn Redux", "Learn about Redux"));
 store.dispatch(add("Build the App", "Create the prototype"));
@@ -46,7 +46,7 @@ import * as ReactDOM from "react-dom";
 /*
   Es gibt zwei Arten von Komponenten:
   1. DUMB COMPONENTS (auch Presentational Components)
-     Dumb Components stellen Dinge dar und machen sonst wenig bis nichts. Sie 
+     Dumb Components stellen Dinge dar und machen sonst wenig bis nichts. Sie
      bekommen "von oben" Daten und Callbacks zugereicht und bauen diese in
      JSX-Markup ein. Sie wissen nicht mal, dass sie in einer Redux-App
      existieren. Dumb Components liegen in "./components/". Die hier
@@ -66,12 +66,12 @@ import TodoApp from "./components/App";
   Der Provider ist ein Tool, mit dem Redux den Store für alle Sub-Komponenten
   bereitstellt. Außer an dieser Stelle sollte er nie benötigt werden. Hier
   können weitere Module neben der Todo-Funktionalität eingebunden werden. Diese
-  Root-Komponente ist nur für die ganz ganz grobe Struktur zuständig. 
+  Root-Komponente ist nur für die ganz ganz grobe Struktur zuständig.
 */
-import { Provider } from 'react-redux';
+import { Provider } from "react-redux";
 ReactDOM.render(
   <Provider store={ store }>
     <TodoApp />
   </Provider>,
-  document.querySelector('#AppRoot')
+  document.querySelector("#AppRoot")
 );

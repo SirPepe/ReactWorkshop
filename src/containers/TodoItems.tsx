@@ -3,7 +3,7 @@
 */
 
 import * as React from "react";
-import { reduxify } from '../lib/util';
+import { reduxify } from "../lib/util";
 
 
 /*
@@ -20,7 +20,7 @@ const mapStateToProps = (state) => {
 /*
   Zusammenbau der Callbacks für die Dumb Components
 */
-import { toggle, remove } from '../actions/todo';
+import { toggle, remove } from "../actions/todo";
 const mapDispatchToProps = (dispatch) => {
   return {
     toggleItem: (id: number) => {
@@ -29,8 +29,8 @@ const mapDispatchToProps = (dispatch) => {
     removeItem: (id: number) => {
       dispatch(remove(id));
     }
-  }
-}
+  };
+};
 
 
 /*

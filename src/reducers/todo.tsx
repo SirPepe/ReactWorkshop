@@ -35,7 +35,7 @@ class Item {
      Zustand des Sub-States beschreibt. Wichtig: Es wird immer ein neuer
      State aus dem alten State erzeugt, nie einfach der der alte State
      verändert
-*/ 
+*/
 export default (state: Item[] = [], action: any): Item[] => {
   const index = state.findIndex(item => item.id === action.id);
   switch (action.type) {
@@ -53,7 +53,6 @@ export default (state: Item[] = [], action: any): Item[] => {
         ...state.slice(0, index),
         ...state.slice(index + 1)
       ];
-      return null;
     case "TOGGLE_TODO":
       // Abhak-Aktion: ein neues Array
       return [
@@ -69,6 +68,6 @@ export default (state: Item[] = [], action: any): Item[] => {
         ...state.slice(index + 1)
       ];
     default:
-      return state
+      return state;
   }
 };

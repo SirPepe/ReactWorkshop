@@ -15,7 +15,7 @@ import * as ReactDOM from "react-dom";
   und z.B. Listen Array<PropType>() bauen.
 */
 export interface TodoFormProps extends React.Props<any> {
-  addItem: (title: string, details: string) => void
+  addItem: (title: string, details: string) => void;
 }
 
 
@@ -31,8 +31,8 @@ export default class TodoForm extends React.Component<TodoFormProps, {}> {
     Smart Component einen Fehler-State kontrolliert, könnte man nach dem
     gleichen Muster einsetzen
   */
-  onSubmit(evt: React.FormEvent){    
-    var title = ReactDOM
+  onSubmit(evt: React.FormEvent){ // TODO Reset input value
+    let title = ReactDOM
       .findDOMNode<HTMLInputElement>(this.refs["title"]).value;
     let details = ReactDOM
       .findDOMNode<HTMLTextAreaElement>(this.refs["details"]).value;

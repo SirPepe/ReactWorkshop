@@ -8,7 +8,7 @@
 import * as React from "react";
 
 export interface TodoStatusProps extends React.Props<any> {
-  open: number
+  open: number;
 }
 
 export default class TodoStatus extends React.Component<TodoStatusProps, {}> {

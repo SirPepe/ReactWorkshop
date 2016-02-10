@@ -18,7 +18,7 @@ import TodoForm from "../components/TodoForm";
   1. Aus dem State werden die für die Komponenten relevanten Daten extrahiert
      und ggf. aufbereitet.
   2. Für die Kommunikation von der Dumb Component zur Smart Component werden
-     Callbacks erstellt, die via ACTION CREATORS mit dem Store sprechen. 
+     Callbacks erstellt, die via ACTION CREATORS mit dem Store sprechen.
   Eine spezielle Redux-Funktion fügt die Daten zu einem einzigen großen
   Prop-Objekt zusammen. Da das Formular keine Daten anzeigen muss, fällt hier
   nur Schritt 2 an.
@@ -30,16 +30,16 @@ import TodoForm from "../components/TodoForm";
   Actions an den Store gesendet werden können. mapDispatchToProps() gibt ein
   Objekt zurück, das Callbacks für die Dumb Component(s) enthält. Mithilfe
   der ACTION CREATORS, die wir aus "./actions/" laden, setzen wir diese
-  Action-Objekte zusammen. 
+  Action-Objekte zusammen.
 */
-import { add } from '../actions/todo';
+import { add } from "../actions/todo";
 const mapDispatchToProps = (dispatch: Redux.Dispatch) => {
   return {
     addItem: (title: string, details: string) => {
       dispatch(add(title, details));
     }
-  }
-}
+  };
+};
 
 
 /*

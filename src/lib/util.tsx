@@ -9,7 +9,7 @@
   und nicht weiter beachten :)
 */
 import { connect } from "react-redux";
-import { Store, Dispatch, ActionCreator } from "redux";
+import { Dispatch, ActionCreator } from "redux";
 interface MapStateToProps {
   (state: any, ownProps?: any): any;
 }
@@ -22,4 +22,4 @@ export interface MapDispatchToPropsObject {
 export const reduxify = (mapStateToProps?: MapStateToProps,
   mapDispatchToProps?: MapDispatchToPropsFunction | MapDispatchToPropsObject) => {
   return target => connect(mapStateToProps, mapDispatchToProps)(target);
-}
+};
