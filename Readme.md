@@ -4,9 +4,10 @@ React/Typescript-Workshop
 Vorbereitungen
 --------------
 
-1. Dependencies: `$ npm install`
+1. ESLint: `npm install -g eslint` (benötigt Adminrechte)
 2. TypeScript Definition Manager: `$ npm install tsd -g` (benötigt Adminrechte)
-3. TypeScript Definitions: `$ tsd install`
+3. Dependencies: `$ npm install`
+4. TypeScript Definitions: `$ tsd install`
 
 Bauen und ausliefern
 --------------------
@@ -20,6 +21,10 @@ Tipps
 
 * Im Browser **Source Maps** aktivieren
 * Erweiterung **Live Reload** installieren
+* Visual Stuido oder das kostenlose **Visual Studio Code** verwenden
+  * [https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig](Editorconfig-Extension) installieren
+  * [https://marketplace.visualstudio.com/items/dbaeumer.vscode-eslint](ESLint-Extension) installieren
+  * In die Config eintragen: `"eslint.options": { "extensions": [ ".tsx" ] }`
 
 Links
 -----
@@ -27,6 +32,3 @@ Links
 * http://rackt.org/redux/docs/introduction/index.html
 * http://rackt.org/redux/docs/introduction/Ecosystem.html#tutorials-and-articles
 * https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6#.70cxs1uhb
-* TODO
-* TODO
-* TODO
