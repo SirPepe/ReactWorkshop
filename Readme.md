@@ -23,6 +23,7 @@ Tipps
 * Erweiterung **Live Reload** installieren
 * Visual Stuido oder das kostenlose **Visual Studio Code** verwenden
   * [https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig](Editorconfig-Extension) installieren
+  * [https://marketplace.visualstudio.com/items?itemName=eg2.tslint](TSLint-Extension) installieren
 
 Links
 -----

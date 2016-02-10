@@ -24,6 +24,8 @@
     "redux": "^3.2.0",
     "redux-devtools": "^3.0.2",
     "ts-loader": "^0.8.0",
+    "tslint": "^3.3.0",
+    "tslint-loader": "^2.1.0",
     "typescript": "^1.7.5",
     "webpack": "^1.12.12"
   },
