@@ -5,7 +5,7 @@
 
 /*
   Das folgende defininiert einen Class Decorator namens "@reduxify", der
-  die Erstellung von Smart Components mit Classen ermöglicht. Einfach verwenden
+  die Erstellung von Smart Components mit Klassen ermöglicht. Einfach verwenden
   und nicht weiter beachten :)
 */
 import { connect } from "react-redux";

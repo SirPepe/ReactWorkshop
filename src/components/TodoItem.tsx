@@ -1,3 +1,6 @@
+/*
+  Eine weitere Dumb Component...
+*/
 import * as React from "react";
 
 export interface TodoItemProps extends React.Props<any> {
@@ -9,6 +12,11 @@ export interface TodoItemProps extends React.Props<any> {
   removeItem: (id: number) => void;
 }
 
+/*
+  Hier ist die Handhabung der Callbacks einfacher als beim Formular: da keine
+  Daten extrahiert oder validiert werden müssen, reicht es, die Callbacks via
+  Arrow Function direkt im Event auszulösen.
+*/
 export default class TodoItem extends React.Component<TodoItemProps, {}> {
   render() {
     return (
