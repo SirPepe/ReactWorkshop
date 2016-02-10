@@ -5,7 +5,7 @@ import TodoList from "../components/TodoList";
 import TodoStatus from "../components/TodoStatus";
 
 const mapStateToProps = (state) => {
-  const open = state.items.filter(item => !item.done).length;
+  const open = state.todoItems.filter(item => !item.done).length;
   return Object.assign({}, state, { open });
 };
 

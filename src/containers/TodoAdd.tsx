@@ -1,5 +1,5 @@
 import * as React from "react";
-import { reduxify } from '../lib/util';
+import { reduxify } from "../lib/util";
 import { add } from '../actions/todo';
 import TodoForm from "../components/TodoForm";
 

@@ -1,9 +1,18 @@
 /*
-  Diese TYPESCRIPT-KLASSE beschreibt einen einzelnen Todo-Punkt-Datensatz.
+  Diese Datei stellt den Reducer für Todo-Punkte bereit.  Hier findet sich
+  alles, was mit Änderungen am "todoItems"-State der App zu tun hat.
+*/
+
+
+/*
+  Diese TypeScript-Klasse beschreibt einen einzelnen Todo-Punkt-Datensatz und
+  wird vom Reducer weiter unten verwendet.
 */
 class Item {
-  // Tipp: "public foo" in im Constructor-Parameter setzt diesen Wert direkt
-  // als Objekt-Property So spart man sich this.foo = foo, this.bar = bar etc.
+  /*
+    Tipp: "public foo" in im Constructor-Parameter setzt diesen Wert direkt
+    als Objekt-Property So spart man sich this.foo = foo, this.bar = bar etc.
+  */
   constructor(
     public title: string,
     public details:string,
