@@ -23,8 +23,6 @@ Tipps
 * Erweiterung **Live Reload** installieren
 * Visual Stuido oder das kostenlose **Visual Studio Code** verwenden
   * [https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig](Editorconfig-Extension) installieren
-  * [https://marketplace.visualstudio.com/items/dbaeumer.vscode-eslint](ESLint-Extension) installieren
-  * In die Config eintragen: `"eslint.options": { "extensions": [ ".tsx" ] }`
 
 Links
 -----

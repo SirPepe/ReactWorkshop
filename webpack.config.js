@@ -3,7 +3,7 @@ module.exports = {
   entry: "./src/root.tsx",
   output: {
     path: "./www/js",
-    filename: "main.js",
+    filename: "main.js"
   },
   resolve: {
     extensions: ["", ".tsx", ".ts", ".js"]
@@ -11,8 +11,7 @@ module.exports = {
   devtool: "source-map",
   module: {
     loaders: [{
-      // loader: "babel?cacheDirectory!ts-loader",
-      loader: "babel!ts-loader",
+      loader: "babel?cacheDirectory!ts-loader",
       exclude: /(node_modules)/,
       test: /\.(ts|tsx)$/
     }],
