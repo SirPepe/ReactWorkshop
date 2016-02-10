@@ -11,8 +11,9 @@ module.exports = {
   devtool: "source-map",
   module: {
     preLoaders: [{
+      exclude: /(node_modules)/,
+      loader: "tslint",
       test: /\.(ts|tsx)$/,
-      loader: "tslint"
     }],
     loaders: [{
       loader: "babel?cacheDirectory!ts-loader",

@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node_modules/.bin/webpack",
     "watch": "node_modules/.bin/webpack  --watch",
-    "serve": "node server.js"
+    "serve": "node_modules/.bin/webpack-dev-server --content-base www"
   },
   "author": "peter@peterkroener.de",
   "license": "MIT",
@@ -27,7 +27,8 @@
     "tslint": "^3.3.0",
     "tslint-loader": "^2.1.0",
     "typescript": "^1.7.5",
-    "webpack": "^1.12.12"
+    "webpack": "^1.12.12",
+    "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
     "express": "^4.13.4",
