@@ -1,20 +1,32 @@
 {
   "rules": {
     "class-name": true,
-    "comment-format": [ true, "check-space" ],
     "curly": true,
     "eofline": false,
-    "indent": [true, "spaces"],
+    "forin": true,
+    "indent": [
+      true,
+      "spaces"
+    ],
     "no-arg": true,
     "no-bitwise": true,
     "no-conditional-assignment": true,
+    "no-console": [
+      true,
+      "log"
+    ],
     "no-construct": true,
     "no-duplicate-key": true,
+    "no-duplicate-variable": true,
+    "no-internal-module": true,
     "no-require-imports": true,
     "no-switch-case-fall-through": true,
     "no-unreachable": true,
     "no-unused-expression": true,
-    "no-unused-variable" : [ true,  "react"],
+    "no-unused-variable": [
+      true,
+      "react"
+    ],
     "no-var-keyword": true,
     "quotemark": [
       true,
