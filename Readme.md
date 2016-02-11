@@ -5,8 +5,7 @@ Vorbereitungen
 --------------
 
 1. Dependencies: `$ npm install`
-2. TypeScript Definition Manager: `$ npm install tsd -g` (benötigt Adminrechte)
-3. TypeScript Definitions: `$ tsd install`
+2. TypeScript Definitions: `$ npm run tsd -- install`
 
 Bauen und ausliefern
 --------------------
@@ -19,7 +18,6 @@ Tipps
 -----
 
 * Im Browser **Source Maps** aktivieren
-* Erweiterung **Live Reload** installieren
 * Visual Stuido oder das kostenlose **Visual Studio Code** verwenden
   * Tipp 1: [Editorconfig-Extension](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) installieren
   * Tipp 2: [TSLint-Extension](https://marketplace.visualstudio.com/items?itemName=eg2.tslint) installieren
@@ -51,4 +49,4 @@ Links
 
 * [Das Redux-Prinzip bildlich erklärt](https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6#.70cxs1uhb)
 * [Redux-Doku](http://rackt.org/redux/docs/introduction/index.html)
-* [Redux-Doku](http://rackt.org/redux/docs/introduction/Ecosystem.html#tutorials-and-articles)
+* [Weiterführende Artikel](http://rackt.org/redux/docs/introduction/Ecosystem.html#tutorials-and-articles)

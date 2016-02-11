@@ -6,7 +6,8 @@
   "scripts": {
     "build": "node_modules/.bin/webpack",
     "watch": "node_modules/.bin/webpack  --watch",
-    "serve": "node_modules/.bin/webpack-dev-server --content-base www"
+    "serve": "node_modules/.bin/webpack-dev-server --content-base www",
+    "tsd": "node_modules/.bin/tsd"
   },
   "author": "peter@peterkroener.de",
   "license": "MIT",
@@ -24,6 +25,7 @@
     "redux": "^3.2.0",
     "redux-devtools": "^3.0.2",
     "ts-loader": "^0.8.0",
+    "tsd": "^0.6.5",
     "tslint": "^3.3.0",
     "tslint-loader": "^2.1.0",
     "typescript": "^1.7.5",
