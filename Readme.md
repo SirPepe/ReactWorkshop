@@ -12,7 +12,7 @@ Bauen und ausliefern
 
 * Normal bauen: `$npm run build`
 * Re-Build mit Watch: `$npm run watch`
-* Lokaler Server + Re-Build mit Watch: `$npm run serve`
+* Lokaler Server + Re-Build mit Watch: `$npm run server`
 
 Tipps
 -----

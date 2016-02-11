@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node_modules/.bin/webpack",
     "watch": "node_modules/.bin/webpack  --watch",
-    "serve": "node_modules/.bin/webpack-dev-server --content-base www",
+    "server": "node_modules/.bin/webpack-dev-server --content-base www",
     "tsd": "node_modules/.bin/tsd"
   },
   "author": "peter@peterkroener.de",
@@ -37,12 +37,5 @@
     "typescript": "^1.7.5",
     "webpack": "^1.12.12",
     "webpack-dev-server": "^1.14.1"
-  },
-  "dependencies": {
-    "express": "^4.13.4",
-    "livereload": "^0.4.1",
-    "morgan": "^1.6.1",
-    "serve-index": "^1.7.3",
-    "serve-static": "^1.10.2"
   }
 }
