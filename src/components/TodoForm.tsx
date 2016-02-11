@@ -36,8 +36,14 @@ export default class TodoForm extends React.Component<TodoFormProps, {}> {
     // Inputs aus dem DOM fischen
     const titleNode = ReactDOM.findDOMNode<HTMLInputElement>(this.refs["title"]);
     const detailsNode = ReactDOM.findDOMNode<HTMLTextAreaElement>(this.refs["details"]);
+    const title = titleNode.value;
+    const details = detailsNode.value;
+    // Kein Titel = kein Todo-Punkt
+    if(!title){
+      return;
+    }
     // Callback wird aufgerufen
-    this.props.addItem(titleNode.value, detailsNode.value);
+    this.props.addItem(title, details);
     // Inputs leeren
     detailsNode.value = "";
     titleNode.value = "";
