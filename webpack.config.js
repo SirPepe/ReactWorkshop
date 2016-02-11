@@ -8,10 +8,12 @@ module.exports = {
     css: "./src/scss/main.scss"
   },
   output: {
-    path: "./www/js",
+    path: path.resolve(__dirname, "www/assets"),
+    publicPath: "/assets/",
     filename: "main.js"
   },
   resolve: {
+    root: path.resolve(__dirname),
     extensions: ["", ".tsx", ".ts", ".js", ".scss", ".css"]
   },
   devtool: "source-map",
@@ -36,6 +38,6 @@ module.exports = {
     includePaths: [ path.resolve(__dirname, "node_modules/foundation-sites/scss") ]
   },
   plugins: [
-    new ExtractTextPlugin("../css/main.css")
+    new ExtractTextPlugin("main.css")
   ],
 };
