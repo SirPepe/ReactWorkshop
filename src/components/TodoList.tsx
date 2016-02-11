@@ -14,7 +14,7 @@ export interface TodoListProps extends React.Props<any> {
   removeItem: (id: number) => void;
 }
 
-export default class TodoList extends React.Component<TodoListProps, {}> { 
+export default class TodoList extends React.Component<TodoListProps, {}> {
   render() {
     /*
       React besteht darauf, dass Elemente, die in Listen vorkommen, ein
@@ -30,6 +30,6 @@ export default class TodoList extends React.Component<TodoListProps, {}> {
         { ...item }
       />
     ));
-    return (<ul> { itemNodes } </ul>);
+    return (<ol className="todoList"> { itemNodes } </ol>);
   }
 }

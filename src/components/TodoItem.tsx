@@ -22,9 +22,11 @@ export default class TodoItem extends React.Component<TodoItemProps, {}> {
     return (
       <li data-done= { this.props.done }>
         <h2>
-          <input checked={ this.props.done }
-            onChange={ evt => this.props.toggleItem(this.props.id) } type="checkbox" />
-          <span> { this.props.title }</span>
+          <label>
+            <input checked={ this.props.done }
+              onChange={ evt => this.props.toggleItem(this.props.id) } type="checkbox" />
+            <span>{ this.props.title }</span>
+          </label>
         </h2>
         <span className="delete" onClick={ evt => this.props.removeItem(this.props.id) }>
           [ <a>Löschen</a> ]

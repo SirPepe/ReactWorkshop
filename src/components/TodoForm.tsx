@@ -51,16 +51,20 @@ export default class TodoForm extends React.Component<TodoFormProps, {}> {
   }
   render() {
     return (
-      <section>
+      <section className="todoForm">
         <h2>Neuen Eintrag anlegen</h2>
         <form onSubmit={ this.onSubmit.bind(this) }>
-          <input name="title" type="text" ref="title"
-            placeholder="Aufgabe" required />
-          <br />
-          <textarea name="details" rows={3} cols={40}
-            placeholder="Details..." ref="details"></textarea>
-          <br />
-          <button type="submit">Speichern</button>
+          <label>
+            Titel der Aufgabe
+            <input name="title" type="text" ref="title"
+              placeholder="Aufgabe" required />
+          </label>
+          <label>
+            Weitere Details zur Aufgabe (optional)
+            <textarea name="details" rows={3} cols={40}
+              placeholder="Details..." ref="details"></textarea>
+          </label>
+          <button type="submit" className="button">Speichern</button>
         </form>
       </section>
     );

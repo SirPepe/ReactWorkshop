@@ -1,0 +1,33 @@
+.todoList {
+  margin-top: $global-margin * 2;
+  margin-bottom: $global-margin * 2;
+}
+
+.todoList li {
+  position: relative;
+  padding: $global-padding / 2;
+}
+.todoList li:nth-of-type(even) {
+  background: $light-gray;
+}
+
+.todoList .delete {
+  position: absolute;
+  top: $global-padding / 2;
+  right: $global-padding;
+}
+
+.todoList li[data-done="true"] {
+  opacity: 0.333;
+}
+.todoList li[data-done="true"] h2 {
+  text-decoration: line-through;
+}
+
+.todoList h2 {
+  font-size: inherit;
+}
+.todoList h2 label {
+  font-size: inherit;
+  font-weight: bold;
+}
