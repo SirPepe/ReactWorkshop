@@ -6,16 +6,19 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "react/react.d.ts": {
-      "commit": "72f0056f69f9a2290d2589c1a692896d24406928"
+      "commit": "b45475991fee80533869ed86d70a96bf8d1aaf5b"
     },
     "react/react-dom.d.ts": {
       "commit": "717a5fdb079f8dd7c19f1b22f7f656dd990f0ccf"
     },
     "redux/redux.d.ts": {
-      "commit": "72f0056f69f9a2290d2589c1a692896d24406928"
+      "commit": "b45475991fee80533869ed86d70a96bf8d1aaf5b"
     },
     "react-redux/react-redux.d.ts": {
       "commit": "72f0056f69f9a2290d2589c1a692896d24406928"
+    },
+    "redux-form/redux-form.d.ts": {
+      "commit": "b45475991fee80533869ed86d70a96bf8d1aaf5b"
     }
   }
 }

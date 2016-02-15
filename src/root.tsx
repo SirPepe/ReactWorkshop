@@ -8,11 +8,16 @@
   STORE. Spezielle Funktionen, genannt REDUCER, bearbeiten den darin
   abgebildeten State. Das Modul "./reducers/index" enthält einen Meta-Reducer,
   der aus allen Reducern in dieser App zusammengesetzt ist. Alle Reducer liegen
-  im Verzeichnis "./reducers/".
+  im Verzeichnis "./reducers/". Zusätzlich zu Reducern kann man einem Store
+  auch ENHANCER mitgeben, die z.B. Logging aktivieren.
 */
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
+import { logger } from "./lib/util";
 import reducers from "./reducers/index";
-const store = createStore(reducers);
+const store = createStore(
+  reducers,                // Meta-Reducer
+  applyMiddleware(logger)  // Logging-Middleware für Debugging
+);
 
 
 /*
@@ -20,16 +25,6 @@ const store = createStore(reducers);
   Die zuständigen REDUCER kümmern sich um die Umsetzung der State-Änderung.
   Per Konvention werden die Action-Objekte über die Aufrufe von Funktionen
   erzeugt, den soganannten ACTION CREATORS. (zu finden in "./actions/")
-  Diese paar Zeilen erzeugen die drei Anfangs-Todo-Punkte
-*/
-import { add } from "./actions/todo";
-store.dispatch(add("Learn React", "Learn about React and JSX"));
-store.dispatch(add("Learn Redux", "Learn about Redux"));
-store.dispatch(add("Build the App", "Create the prototype"));
-/*
-  Normalerweise würde man "store.dispatch()" nie direkt aufrufen (allein schon
-  weil man nirgends sonst auf die Variable "store" Zugriff hat), aber hier
-  geht es gerade nicht anders.
 */
 
 
@@ -75,3 +70,17 @@ ReactDOM.render(
   </Provider>,
   document.querySelector("#AppRoot")
 );
+
+
+/*
+  Diese paar Zeilen erzeugen die drei Anfangs-Todo-Punkte
+*/
+import { add } from "./actions/todo";
+store.dispatch(add("Learn React", "Learn about React and JSX"));
+store.dispatch(add("Learn Redux", "Learn about Redux"));
+store.dispatch(add("Build the App", "Create the prototype"));
+/*
+  Normalerweise würde man "store.dispatch()" nie direkt aufrufen (allein schon
+  weil man nirgends sonst auf die Variable "store" Zugriff hat), aber hier
+  geht es gerade nicht anders.
+*/

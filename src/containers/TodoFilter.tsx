@@ -1,17 +1,14 @@
 import * as React from "react";
 import FilterComponent from "../components/TodoFilter";
-import { set } from "../actions/filter";
+import { reduxForm } from "redux-form";
 
-const mapDispatchToProps = (dispatch: Redux.Dispatch) => {
-  return {
-    setFilter: (state: string) => {
-      dispatch(set(state));
-    }
-  };
-};
-
-import { reduxify } from "../lib/util";
-@reduxify(null, mapDispatchToProps)
+@reduxForm({
+  form: "filter",
+  fields: ["state"],
+  initialValues: {
+    state: "all"
+  }
+})
 export default class TodoFilter extends React.Component<any, {}> {
   render() {
     return (

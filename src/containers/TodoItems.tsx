@@ -13,13 +13,16 @@ import { reduxify } from "../lib/util";
 */
 const mapStateToProps = (state) => {
   let filterItems = (item) => {
-    switch(state.filter){
-      case "all":
-        return true;
+    const filterSetting = state.form.filter.state.value;
+    switch(filterSetting){
       case "open":
         return item.done === false;
       case "done":
         return item.done === true;
+      case "all":
+        return true;
+      default:
+        return true;
     }
   };
   const numAll = state.todoItems.length;
