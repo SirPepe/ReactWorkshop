@@ -19,6 +19,7 @@
   verteilt werden. Die werden in diese Index-Datei importiert...
 */
 import todoReducer from "./todo";
+import filterReducer from "./filter";
 
 
 /*
@@ -27,5 +28,6 @@ import todoReducer from "./todo";
 */
 import { combineReducers } from "redux";
 export default combineReducers({
-  todoItems: todoReducer
+  todoItems: todoReducer,
+  filter: filterReducer
 });

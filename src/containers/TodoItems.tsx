@@ -12,8 +12,20 @@ import { reduxify } from "../lib/util";
   sowie der "open"-Property, die die Anzahl der nicht-fertigen Items enthält
 */
 const mapStateToProps = (state) => {
-  const open = state.todoItems.filter(item => !item.done).length;
-  return Object.assign({}, state, { open });
+  let filterItems = (item) => {
+    switch(state.filter){
+      case "all":
+        return true;
+      case "open":
+        return item.done === false;
+      case "done":
+        return item.done === true;
+    }
+  };
+  const numAll = state.todoItems.length;
+  const todoItems = state.todoItems.filter(filterItems);
+  const numDisplay = todoItems.length;
+  return Object.assign({}, { todoItems}, { numAll, numDisplay });
 };
 
 
@@ -21,7 +33,7 @@ const mapStateToProps = (state) => {
   Zusammenbau der Callbacks für die Dumb Components
 */
 import { toggle, remove } from "../actions/todo";
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch: Redux.Dispatch) => {
   return {
     toggleItem: (id: number) => {
       dispatch(toggle(id));
@@ -38,11 +50,13 @@ const mapDispatchToProps = (dispatch) => {
 */
 import TodoList from "../components/TodoList";
 import TodoStatus from "../components/TodoStatus";
+import TodoFilter from "./TodoFilter";
 @reduxify(mapStateToProps, mapDispatchToProps)
 export default class TodoItems extends React.Component<any, {}> {
   render() {
     return (
       <div>
+        <TodoFilter />
         <TodoStatus { ...this.props } />
         <TodoList { ...this.props } />
       </div>
