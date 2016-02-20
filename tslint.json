@@ -8,6 +8,9 @@
       true,
       "spaces"
     ],
+    "max-line-length": [
+      true, 80
+    ],
     "no-arg": true,
     "no-bitwise": true,
     "no-conditional-assignment": true,

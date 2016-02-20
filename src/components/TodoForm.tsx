@@ -34,8 +34,10 @@ export default class TodoForm extends React.Component<TodoFormProps, {}> {
   onSubmit(evt: React.FormEvent){
     evt.preventDefault();
     // Inputs aus dem DOM fischen
-    const titleNode = ReactDOM.findDOMNode<HTMLInputElement>(this.refs["title"]);
-    const detailsNode = ReactDOM.findDOMNode<HTMLTextAreaElement>(this.refs["details"]);
+    const titleNode =
+      ReactDOM.findDOMNode<HTMLInputElement>(this.refs["title"]);
+    const detailsNode =
+      ReactDOM.findDOMNode<HTMLTextAreaElement>(this.refs["details"]);
     const title = titleNode.value;
     const details = detailsNode.value;
     // Kein Titel = kein Todo-Punkt
@@ -74,6 +76,7 @@ export default class TodoForm extends React.Component<TodoFormProps, {}> {
 
 /*
   Das ist ein sehr einfaches Formular, dessen Eingaben nicht direkt den State
-  der App beeinflussen. Für komplexere Aufgaben könnte https://github.com/erikras/redux-form
-  einen Blick wert sein.
+  der App beeinflussen. Sollte das mal der Fall sein, lassen sich mit
+  https://github.com/erikras/redux-form Formularfelder direkt an den State
+  anbinden. Das Filter-Input in diesem Beispiel ist ein Beispiel dafür.
 */

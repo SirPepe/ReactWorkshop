@@ -1,7 +1,8 @@
 /*
-  Dieses Modul exportiert die ACTION CREATORS - einfache Funktionen, die
-  Nachrichten für den Store konstruieren. Diese Nachrichten sind Objekte mit
-  einer "type"-Eigenschaft und alle sonstigen relevanten Arguments.
+  Dieses Modul exportiert die ACTION CREATORS für Todo-Punkte - einfache
+  Funktionen, die Nachrichten für den Store konstruieren. Diese Nachrichten
+  sind Objekte mit einer "type"-Eigenschaft und alle sonstigen relevanten
+  Arguments.
 */
 
 let todoId = 0;

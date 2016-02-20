@@ -1,5 +1,6 @@
 /*
-  Eine weitere Dumb Component...
+  Eine weitere Dumb Component, diesmal für das Anzeigen eines
+  Todo-Punkts.
 */
 import * as React from "react";
 
@@ -24,11 +25,13 @@ export default class TodoItem extends React.Component<TodoItemProps, {}> {
         <h2>
           <label>
             <input checked={ this.props.done }
-              onChange={ evt => this.props.toggleItem(this.props.id) } type="checkbox" />
+              onChange={ evt => this.props.toggleItem(this.props.id) }
+              type="checkbox" />
             <span>{ this.props.title }</span>
           </label>
         </h2>
-        <span className="delete" onClick={ evt => this.props.removeItem(this.props.id) }>
+        <span className="delete"
+          onClick={ evt => this.props.removeItem(this.props.id) }>
           [ <a>Löschen</a> ]
         </span>
         <p className="details"> { this.props.details } </p>

@@ -16,7 +16,8 @@
 
 /*
   Die einzelnen Reducer sollten der Übersicht halber auf einzelne Module
-  verteilt werden. Die werden in diese Index-Datei importiert...
+  verteilt werden (sofern es sich nicht ohnehin um Library-Funktionen handelt).
+  Die Reducer werden in diese Index-Datei importiert...
 */
 import todoReducer from "./todo";
 import { reducer as formReducer } from "redux-form";
@@ -29,5 +30,5 @@ import { reducer as formReducer } from "redux-form";
 import { combineReducers } from "redux";
 export default combineReducers({
   todoItems: todoReducer,
-  form: formReducer
+  form: formReducer  // Hier landen alle Form-direkt-nach-State-Werte
 });

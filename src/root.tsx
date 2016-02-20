@@ -52,7 +52,7 @@ import * as ReactDOM from "react-dom";
      als Logik-Wrapper um Dumb Components vorstellen. Alle Dumb Components
      liegen in "/.containers/"
   Die Unterschiede zwischen Smart und Dumb Components sind hier aufgeführt:
-  http://rackt.org/redux/docs/basics/UsageWithReact.html#presentational-and-container-components
+  http://rackt.org/redux/docs/basics/UsageWithReact.html
 */
 import TodoApp from "./components/App";
 

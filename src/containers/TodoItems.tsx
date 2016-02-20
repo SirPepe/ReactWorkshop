@@ -8,11 +8,15 @@ import { reduxify } from "../lib/util";
 
 /*
   Diese Funktion baut aus dem vorhandenen State das für die Dumb Components
-  relevante Datenset zusammen. In diesem Fall besteht es aus allen Todo-Punkten
-  sowie der "open"-Property, die die Anzahl der nicht-fertigen Items enthält
+  relevante Datenset zusammen. In diesem Fall besteht es aus den anzuzeigenden
+  Todo-Punkten (gesteuert durch den aktuellen Wert des Filter-Felds) sowie
+  der den Properties "numAll" und "numDisplay, die die Anzahl der vorhandenen
+  und der angezeigten Elemente enthalten.
 */
-const mapStateToProps = (state) => {
-  let filterItems = (item) => {
+import { TodoItemProps } from "../components/TodoItem";
+const mapStateToProps = (state):
+  { todoItems: TodoItemProps[], numAll: number, numDisplay: number } => {
+  let filterItems = (item): boolean => {
     const filterSetting = state.form.filter.state.value;
     switch(filterSetting){
       case "open":
@@ -38,12 +42,8 @@ const mapStateToProps = (state) => {
 import { toggle, remove } from "../actions/todo";
 const mapDispatchToProps = (dispatch: Redux.Dispatch) => {
   return {
-    toggleItem: (id: number) => {
-      dispatch(toggle(id));
-    },
-    removeItem: (id: number) => {
-      dispatch(remove(id));
-    }
+    toggleItem: (id: number) => dispatch(toggle(id)),
+    removeItem: (id: number) => dispatch(remove(id))
   };
 };
 

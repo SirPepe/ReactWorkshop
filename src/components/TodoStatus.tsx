@@ -17,10 +17,10 @@ export default class TodoStatus extends React.Component<TodoStatusProps, {}> {
     return (x === 1) ?  "Element" : "Elemente";
   }
   render() {
-    const { numDisplay, numAll } = this.props;
+    const { numDisplay: num, numAll: all } = this.props;
     return (
       <p className="status">
-        Zeige <b>{ numDisplay } { this.getInflection(numDisplay) } </b> von insgesamt { numAll }
+        Zeige <b>{ num } { this.getInflection(num) } </b> von insgesamt { all }
       </p>
     );
   }
